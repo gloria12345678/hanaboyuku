@@ -1,0 +1,162 @@
+/*10/8*/
+/*toyo*/
+.pc{
+    display: none;
+}
+.girlPhoto{
+    height: 200px;
+    /* background-color: #ff7da6; */
+}
+.girlPhotoBigBox{
+    width: 45%;
+    height: 81%;
+}
+.girlPhotoBox{
+    width: 95%;
+    height: 85%;
+    border: 3px #ff658d solid;
+    border-radius: 5px 5px 0 0;
+
+}
+.girlPhotoBox img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.girlPhotoName{
+    width: 95%;
+    height: 12%;
+    background-color: #ffffff;
+    color: #ff3636;
+    font-size: 19px;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px #ff658d solid;
+}
+.event{
+    height: 180px;
+    background-image: url(../img/event.png);
+}
+.news{
+    height: 450px;
+    /* background-color: #310203; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.newsTitle{
+    height: 10%;
+    background-image: url(../img/news.png);
+}
+.twitterTitle{
+    height: 10%;
+    background-image: url(../img/twitter.png);
+}
+.newsText{
+    height: 88%;
+    width: 84%;
+    overflow-y: scroll;
+    border: 5px #ff658d solid;
+    border-radius: 10px;
+    background-color: #e2ffffba;
+}
+.text{
+    height: 420px;
+    width: 95%;
+    margin: 3%;
+    font-size: 18px;
+    color: lightcoral;
+}
+.text p{
+    width: 100%;
+    color: orange;
+}
+.map{
+    background-image: url(../img/accerss.png);
+}
+.map1{
+    background-image: url(../img/map1.png);
+}
+.line{
+    background-image: url(../img/line.png);
+}
+@media screen and (min-width:700px) {
+    .news {
+        height: 862px;
+    }
+    .newsText {
+        height: 83%;
+    }
+.newsTitle ,.twitterTitle{
+    height: 12%;
+}
+.endimg {
+    height: 245px;
+}
+
+}
+@media screen and (min-width:900px) {
+
+    .pc{
+        height: 1100px;
+        display: block;
+    }
+    .Mobile{
+        display: none;
+    }
+    .right{
+        width: 600px;
+        height: 100%;
+        float: right;
+    }
+    .left{
+        width: 300px;
+        height: 100%;
+        float: left;
+    }
+    .event {
+        width: 100%;
+        height: 795px;
+    }
+    .focus {
+        height: 450px;
+    }
+    .girlPhoto{
+        height: 450px;
+    }
+    .girlPhotoBox{
+        width: 80%;
+        height: 80%;
+    }
+    .news{
+        width: 610px;
+        height: 265px;
+        float: left;
+    }
+    .news1{
+        width: 500px;
+        height: 265px;
+        overflow-y: scroll;
+
+    }
+    .text {
+        height: 238px;
+        width: 95%;
+    }
+    
+   .newsText {
+    width: 570px;
+    height: 265px;
+    }
+    .newsTitle ,.twitterTitle{
+        width: 316px;
+        height: 40px;
+        background-size: contain;
+    }
+    .line ,.map ,.map1{
+        width: 99%;
+        height: 130px;
+        margin: 10px;
+    }
+}
