@@ -69,13 +69,12 @@ fetch(myApi)
           "overflow":" hidden"
         })
      });
-     if(staffPro.style.height==winHeight+"px"){
-       $(staffPro).click(function(){
-         document.addEventListener('touchmove',function(event){
-           event.preventDefault();
-         }, { passive: false });
-       });
-     }
+     $(staffPro).click(function(){
+      console.log("2342341www")
+       document.addEventListener('touchmove',function(event){
+         event.preventDefault();
+       }, { passive: false });
+     });
      $("#x"+i).click(function(){
        console.log("2342341aa")
        $('#lookBigPhoto'+i).css({"height":"0px"})
