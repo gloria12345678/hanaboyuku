@@ -97,10 +97,10 @@ fetch(myApi)
   let urlnull =""
   let urlGirl ="girl.html"
   console.log(urlnull);
-  if(url==urlIndex||urlnull){
-    indexGrilPhoto();
-  }if(url==urlGirl){
+  if(url==urlGirl){
     girlPegephoto()
+  }else{
+    indexGrilPhoto();
   }
 })
 .catch(function(error) {
