@@ -95,8 +95,9 @@ fetch(myApi)
   url = url.substring(url.lastIndexOf('/') + 1, url.length);
   console.log(url);
   let urlIndex ="index.html"
+  let urlnull =""
   let urlGirl ="girl.html"
-  if(url==urlIndex){
+  if(url==urlIndex||urlnull){
     indexGrilPhoto();
   }if(url==urlGirl){
     girlPegephoto()
