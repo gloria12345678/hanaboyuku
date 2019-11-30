@@ -97,6 +97,7 @@ fetch(myApi)
   let urlIndex ="index.html"
   let urlnull =""
   let urlGirl ="girl.html"
+  console.log(urlnull);
   if(url==urlIndex||urlnull){
     indexGrilPhoto();
   }if(url==urlGirl){
