@@ -44,18 +44,24 @@ fetch(myApi)
     }
   }
   function girlPegephoto(){
-    for(var i = 0; i < json.length; i++) {
-      var girlPhoto =document.createElement("div");
-      girlPhoto.setAttribute("class","swiper-slide");
-      girlPhoto.setAttribute("id","swiper2");
-      var j = i+i
-      var k = i+i+1
-      girlPhoto.innerHTML = '<div class="girlPhotoBigBox"><div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[j].avatars[0]+'"> <div class="girlPhotoName"> ' + json[j].name+ '</div></div></div><div class="girlPhotoBigBox"><div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[k].avatars[0]+'"><div class="girlPhotoName"> ' + json[k].name+ '</div></div></div>';
-      apiList.appendChild(girlPhoto);
-      var swiper = new Swiper('#Swiper99', {
+    for(let i = 0; i < json.length; i++) {
+      var para=document.createElement("div");
+      para.setAttribute("class","staff");
+      var img =new Array
+      for(var j=0;j<3;j++){
+        img[j] ="https://test-cms-alpha.herokuapp.com"+json[i].avatars[j];
+        if(img[j]=="https://test-cms-alpha.herokuapp.comundefined"){
+          img[j]="staff/all.jpg"
+        }
+      }
+      para.innerHTML = '<div class="staffBox"><div class="staPhotoffBox"><div class="staBigPhotoffBox"><div class="swiper-container" id="swiper'+i+'"><div class="swiper-wrapper"><div class="swiper-slide"><img id="img1" src="'+ img[0]+'"></div><div class="swiper-slide"><img id="img2" src="'+ img[1]+'"></div> <div class="swiper-slide"><img id="img3" src="'+ img[2]+'"></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div></div><div class="staPhotoffBoxSmall"><ul><li><img id="" src="'+ img[0]+'"></li><li><img id="" src="'+ img[1]+'"></li><li><img id="" src="'+ img[2]+'"></li></ul></div></div><div class="txt"><h2 id="name">' + json[i].name+ '</h2> <br><h2 id="old">年齢:' + json[i].age+ '</h2><br><h3 id="sizi">3サイズ：' + json[i].abstract + '</h3><br><h4 id="txt">' + json[i].description + '</h4></div></div>';
+      myList.appendChild(para);
+      var mySwiper = new Swiper('#swiper'+i,{
+        direction : 'horizontal',
         loop : true,
-        autoplay:2000,
-      });
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+      })
     }
   }
   let url = window.location.pathname;
