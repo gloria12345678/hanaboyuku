@@ -1,7 +1,7 @@
 var myList = document.getElementById('getMyStaff');
 var apiList = document.getElementById('girlPhoto');
 var apiGirlPhoto = document.getElementById('PcGirlPhoto');
-var myApi ="https://test-cms-alpha.herokuapp.com/sites/3/profiles.json"
+var myApi ="https://test-cms-alpha.herokuapp.com/sites/6/profiles.json"
 document.write('<script src="../swiper.min.js"></script>');
 fetch(myApi)
 .then(function(response) {
@@ -83,7 +83,7 @@ fetch(myApi)
 });
 var myList1 = document.getElementById('catchMynews');
 var myList2 = document.getElementById('catchMynews1');
-var myApi1 ="https://test-cms-alpha.herokuapp.com/sites/3/tweets.json"
+var myApi1 ="https://test-cms-alpha.herokuapp.com/sites/6/tweets.json"
 // console.log(myList1);
 fetch(myApi1)
 .then(function(response) {
