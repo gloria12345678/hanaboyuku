@@ -4,8 +4,8 @@ var apiList = document.getElementById('girlPhoto');
 var apiList1 = document.getElementById('PcGirlPhoto');
 var myList1 = document.getElementById('catchMynews');
 var myList2 = document.getElementById('catchMynews1');
-var myApi ="https://test-cms-alpha.herokuapp.com/sites/3/profiles.json"
-var myApi1 ="https://test-cms-alpha.herokuapp.com/sites/3/tweets.json"
+var myApi ="https://test-cms-alpha.herokuapp.com/sites/6/profiles.json"
+var myApi1 ="https://test-cms-alpha.herokuapp.com/sites/6/tweets.json"
 function loadMyStaff(){
   let xhr = new XMLHttpRequest();
   xhr.open("GET",myApi,true);
