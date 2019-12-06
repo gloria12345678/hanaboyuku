@@ -5,7 +5,7 @@ var apiList1 = document.getElementById('PcGirlPhoto');
 var myList1 = document.getElementById('catchMynews');
 var myList2 = document.getElementById('catchMynews1');
 var myApi ="https://test-cms-alpha.herokuapp.com/sites/6/profiles.json"
-var myApi1 ="https://test-cms-alpha.herokuapp.com/sites/6/tweets.json"
+var myApi1 ="https://test-cms-alpha.herokuapp.com/sites/3/tweets.json"
 function loadMyStaff(){
   let xhr = new XMLHttpRequest();
   xhr.open("GET",myApi,true);
@@ -24,14 +24,21 @@ function loadMyStaff(){
                img[j]="staff/all.jpg"
             }
           }
-          para.innerHTML = '<div class="staffBox"><div class="staPhotoffBox"><div class="staBigPhotoffBox"><div class="swiper-container swiper-c" id="swiper'+i+'"><div class="swiper-wrapper"><div class="swiper-slide"><img id="img1" src="'+ img[0]+'"></div><div class="swiper-slide"><img id="img2" src="'+ img[1]+'"></div> <div class="swiper-slide"><img id="img3" src="'+ img[2]+'"></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div></div><div class="staPhotoffBoxSmall"><ul><li><img id="" src="'+ img[0]+'"></li><li><img id="" src="'+ img[1]+'"></li><li><img id="" src="'+ img[2]+'"></li></ul></div></div><div class="txt"><h2 id="name">' + json[i].name+ '</h2> <br><h2 id="old">年齢:' + json[i].age+ '</h2><br><h3 id="sizi">3サイズ：' + json[i].abstract + '</h3><br><h4 id="txt">' + json[i].description + '</h4></div></div>';
+          para.innerHTML = '<div class="staffBox"><div class="staPhotoffBox"id="staffPro'+i+'"><div class="staBigPhotoffBox"><div class="swiper-container swiper-c" id="swiper'+i+'"><div class="swiper-wrapper"><div class="swiper-slide swiper-slide1"><img id="img1" src="'+ img[0]+'"></div><div class="swiper-slide"><img id="img2" src="'+ img[1]+'"></div> <div class="swiper-slide"><img id="img3" src="'+ img[2]+'"></div></div></div></div><div class="staPhotoffBoxSmall"><ul><li><img id="" src="'+ img[0]+'"></li><li><img id="" src="'+ img[1]+'"></li><li><img id="" src="'+ img[2]+'"></li></ul></div></div><div class="txt"><h2 id="name">' + json[i].name+ '</h2> <br><h2 id="old">年齢:' + json[i].age+ '</h2><br><h3 id="sizi">3サイズ：' + json[i].abstract + '</h3><br><h4 id="txt">' + json[i].description + '</h4></div></div>';
           myList.appendChild(para);
+          var staffPro = document.getElementById('staffPro'+[i]);
+          staffPro.addEventListener('click', locationStaff, true);
           var mySwiper = new Swiper('#swiper'+i,{
             direction : 'horizontal',
             loop : true,
-            prevButton:'.swiper-button-prev',
-            nextButton:'.swiper-button-next',
           })
+            function locationStaff (){
+           // console.log( 'staff.html?id='+[i])
+           window.location.href = 'girl_big.html?'+[i]+'&aassdfwdw##5345afasdfqweqw';
+          };
+          var mySwiper = new Swiper('.swiper-container1',{
+           direction : 'horizontal',
+           })
         }
       }              
   }
@@ -52,7 +59,7 @@ function loadIndexStaff(){
             var girlPhoto =document.createElement("div");
             girlPhoto.setAttribute("class","swiper-slide");
             girlPhoto.setAttribute("id","swiper2");
-            girlPhoto.innerHTML = '<div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[i].avatars[0]+'"><div class="girlPhotoName"> ' + json[i].name+ '</div>';
+            girlPhoto.innerHTML = '<div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[i].avatars[0]+'">';
             apiList1.appendChild(girlPhoto);
             var swiper = new Swiper('#Swiper0', {
               loop : true,
@@ -66,7 +73,7 @@ function loadIndexStaff(){
             girlPhoto.setAttribute("id","swiper2");
             var j = i+i
             var k = i+i+1
-            girlPhoto.innerHTML = '<div class="girlPhotoBigBox"><div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[j].avatars[0]+'"> <div class="girlPhotoName"> ' + json[j].name+ '</div></div></div><div class="girlPhotoBigBox"><div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[k].avatars[0]+'"><div class="girlPhotoName"> ' + json[k].name+ '</div></div></div>';
+            girlPhoto.innerHTML = '<div class="girlPhotoBigBox"><div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[j].avatars[0]+'"></div></div><div class="girlPhotoBigBox"><div class="girlPhotoBox"><img src="https://test-cms-alpha.herokuapp.com'+json[k].avatars[0]+'"></div></div>';
             apiList.appendChild(girlPhoto);
             var mySwiper = new Swiper("#Swiper99",{
               autoplay:2000,
@@ -101,9 +108,6 @@ function loadnews(){
   }
   xhr.send();
 }
-// // loadMyStaff()
-// loadIndexStaff()
-// loadnews()
 let url = window.location.pathname;
 url = url.substring(url.lastIndexOf('/') + 1, url.length);
 console.log(url);

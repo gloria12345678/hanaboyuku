@@ -14,6 +14,7 @@ h1{
 a{
     color: #ffffff;
     text-decoration:none;
+    vertical-align: initial;
 }
 .body{
     background-color:#ffa1be;/*改*/
@@ -26,7 +27,7 @@ a{
     width: 98.7%;
     position: fixed;
     z-index: 10;
-    height: 49px;
+    height: 41px;
     background-color: #ff6464;
     border: 3px #ffffff solid
 }
@@ -90,8 +91,8 @@ a{
     vertical-align: middle;
 }
 .top{
-    height: 210px;
-    padding-top: 57px;
+    height: 238px;
+    padding-top: 48px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -99,16 +100,40 @@ a{
    
 
 }
-
+.tel{
+    display: none;
+}
+.topTxt{
+    margin-top: 5px;
+    height: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 .logo{
     width: 224px;
     height: 144px;
     background-image: url(../img/logo.png);
 }
-.tel{
-    width: 233px;
-    height: 63px;
-    background-image: url(../img/tel.png);
+.topTxtleft ,.topTxtRight ,.btuTxtleft ,.btuTxtRight{ 
+    height: 25px;
+}
+.topTxtleft{ 
+    width: 150px;
+    background-image: url(../img/1.png);
+}
+.topTxtRight{ 
+    width: 190px;
+    background-image: url(../img/2.png);
+}
+.btuTxtleft{ 
+    width: 165px;
+    background-image: url(../img/3.png);
+}
+.btuTxtRight{ 
+    width: 195px;
+    background-image: url(../img/4.png);
 }
 .navLage{
     height:75px;
@@ -152,6 +177,9 @@ a{
     justify-content: center;
     background-image: url(../img/end.png);
 }
+.endimg a{
+    height: 80px;
+}
 .Titles{
     height: 66px;
     /* background-image: url(../img/titleback.png); */
@@ -159,12 +187,25 @@ a{
     background-size: unset;
 }
 @media screen and (min-width:700px) {
+    .tel{
+        width: 233px;
+        height: 63px;
+        background-image: url(../img/tel.png);
+        display: block;
+    }
+    .topTxt{ 
+        display:none;
+    }
+    .topTxt1{
+        display: block;
+        display: flex;
+    }
     .body{
         background-repeat: no-repeat;
         background-position-x: right;
     }
     .top{
-    height: 160px;
+    height: 185px;
     justify-content:space-between;
     padding-top: 98px;
     }
@@ -175,9 +216,6 @@ a{
     .telephone {
         font-size: 50px;
     }
-    .top div{
-        margin: 25px;/*需要调试*/
-    }
     .endimg{
         display: none;
     }
@@ -186,6 +224,7 @@ a{
         height: 180px;/*需要调试*/
         justify-content:space-between;
         display: flex;
+        background-color: #ffcccc;
     }
     .Titles{
         height: 107px;
