@@ -44,7 +44,7 @@ a{
 }
 .navimg{
     height: 82%;
-    width: 9%;
+    width: 8%;
     margin: 7px;
     background-image: url(../img/list.png);
     float: right;
@@ -91,7 +91,7 @@ a{
     vertical-align: middle;
 }
 .top{
-    height: 238px;
+    height: 188px;
     padding-top: 48px;
     display: flex;
     flex-wrap: wrap;
@@ -112,27 +112,23 @@ a{
     justify-content: space-between;
 }
 .logo{
-    width: 224px;
-    height: 144px;
+    width: 251px;
+    height: 105px;
     background-image: url(../img/logo.png);
 }
 .topTxtleft ,.topTxtRight ,.btuTxtleft ,.btuTxtRight{ 
     height: 25px;
 }
 .topTxtleft{ 
-    width: 150px;
+    width: 300px;
     background-image: url(../img/1.png);
 }
-.topTxtRight{ 
-    width: 190px;
-    background-image: url(../img/2.png);
-}
 .btuTxtleft{ 
-    width: 165px;
+    width: 143px;
     background-image: url(../img/3.png);
 }
 .btuTxtRight{ 
-    width: 195px;
+    width: 177px;
     background-image: url(../img/4.png);
 }
 .navLage{
